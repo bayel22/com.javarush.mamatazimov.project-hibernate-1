@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: rpg_database
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: rpg
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    ports:
+      - "3306:3306"
+    networks:
+      - rpg_net
+
+networks:
+  rpg_net:
